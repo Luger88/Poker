@@ -1,0 +1,42 @@
+"InstallScript"
+{
+	"Registry"
+	{
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Telltale Games\\CelebrityPoker.exe"
+		{
+			"string"
+			{
+				"Distribution"		"Telltales"
+				"Franchise"		"CelebrityPoker"
+				"Install Location"		"%INSTALLDIR%//"
+				"Language"		"English"
+				"Language ID"		"1033"
+				"Manual"		"manual.pdf"
+				"Readme"		"Readme.txt"
+				"SaveGameFolderName"		"Poker Night at the Inventory"
+				"Version"		"1.0.0.0"
+			}
+		}
+	}
+	"Run Process"
+	{
+		"DirectX"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Valve\\Steam\\Apps\\31280"
+			"Process 1"		"%INSTALLDIR%\\DirectX\\DXSETUP.exe"
+			"Command 1"		"/silent"
+			"NoCleanUp"		"1"
+		}
+		"VCRedist"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Valve\\Steam\\Apps\\31280"
+			"Process 1"		"%INSTALLDIR%\\vcredist_x86.exe"
+			"Command 1"		"/q"
+			"NoCleanUp"		"1"
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"5f1359cdf6c2b030932d7d3b36fd8cab308bf9c369a9f17566608f2d20f581f00ed71315a4437def3d5f66adcc839fcb6fafcbe8a6d57ccd4a7ffcd1f0e850559a0f1420a8abe574785422cdce3127e4eb40b2dbe76a541b7fadd20a3190151aaf668a1ef83b2a05cdfa49ea99d5ddb022b6cc419a8117bda169f87cb8d90b33"
+}
